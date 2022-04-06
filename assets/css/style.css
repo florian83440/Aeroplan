@@ -1,0 +1,114 @@
+:root
+{
+    --main_color : #cc333c;
+    --bg_color: #cde0eb;
+    --bg_linear: linear-gradient(135deg, rgba(204, 51, 61, 0.4), rgba(205, 224, 235, 0.616));
+    --contrast_main: #041c24;
+    --contrast_second: #080404;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(assets/font/Poppins/Poppins-regular.ttf);
+}
+*
+{
+    box-sizing: border-box;
+}
+html, body 
+{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: Poppins, sans-serif;
+}
+body
+{
+    background: var(--bg_linear),
+                url('/assets/images/bg.jpg');
+                background-position: center top;
+}
+.columns
+{
+    padding: 15px;
+}
+/* Titres */
+h1.title
+{
+    color: var(--main_color) !important;
+}
+/* INPUTS */
+input[type="text"]:focus
+{
+    box-shadow: 0 0 5px gray;
+}
+/* Page de login */
+#login
+{
+    width: 50%;
+    margin: 100px 25%;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px gray;
+    background-color: white;
+}
+#login .field
+{
+    padding: 15px 15%;
+}
+#login span.error
+{
+    color: red;
+}
+/* Barre complexité mot de passe */
+.empty
+{
+    background-color: lightgrey;
+    width: 500px;
+    height: 20px;
+    position: relative;
+}
+.empty_child
+{
+    background-color: red;
+    width: 0;
+    height: 20px;
+    position: absolute;
+    z-index: 99;
+    transition: width 1s;
+}
+/* Barre de navigation */
+.navbar
+{
+    box-shadow: 0px 0px 10px gray;
+}
+.navbar a:hover
+{
+    color: var(--main_color) !important;
+}
+/* Main div */
+div.main
+{
+    height: 100%;
+    color: black !important;
+}
+/* Mes informations */
+div#account
+{
+    background-color: white;
+    padding: 15px;
+}
+/* Ajout */
+div#personnel
+{
+    background-color: white;
+    padding: 15px;
+}
+/* Responsive */
+@media (max-width: 600px) 
+{  
+    #login
+    {
+        width: 80%;
+        margin: 15% 10%;
+    }
+}
